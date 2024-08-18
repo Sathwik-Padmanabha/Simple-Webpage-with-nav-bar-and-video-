@@ -1,0 +1,289 @@
+/* Style the container */
+.container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Prevent content overflow outside the container */
+  }
+  
+  /* Style the video container (no need for separate video container now) */
+  .fullscreen-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video fills container proportionally */
+  }
+  
+  /* Style the content area */
+  .content-area {
+    position: absolute;
+    top: 50%;
+    left: 2rem; /* Position content area with some left padding */
+    transform: translateY(-50%); /* Center content area vertically */
+    color: rgb(12, 15, 59);
+    text-align: left; /* Align text left for readability */
+    padding: 2rem;
+    animation: entrance 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes entrance {
+    from { opacity: 0; transform: translateX(-20px); } /* Slide content from left */
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .content-area h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-area p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .content-area button {
+    background-color: #e08421;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: button-pulse 1s infinite alternate ease-in-out;
+  }
+  
+  @keyframes button-pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+.page1{
+    width:100%;
+    height:100vh;
+}  
+/* Style the page container */
+/* Style the page container */
+.page1 {
+    display: flex;
+    height: 100vh;
+    position: relative; /* Needed for absolute positioning of content area */
+  }
+  
+  /* Style the image container */
+  .image-container {
+    flex: 1; /* Image occupies half the width */
+    overflow: hidden; /* Prevent image overflow outside the container */
+  }
+  
+  /* Style the image */
+  .background-image {
+    width: 100%; /* Stretch image to cover container width */
+    height: 100%; /* Stretch image to cover container height */
+    object-fit: cover; /* Ensure image fills container proportionally */
+  }
+  
+  /* Style the content area */
+  .content-area {
+    position: absolute; /* Make content area absolute for positioning */
+    top: 5%; /* Position content area vertically at center */
+    left: 2rem; /* Add left padding for content */
+    transform: translateY(-50%); /* Center content area vertically */
+    color: rgb(14, 16, 47);
+    text-align: left; /* Align text left for readability */
+    padding: 2rem;
+    animation: entrance 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes entrance {
+    from { opacity: 0; transform: translateX(-20px); } /* Slide content from left */
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .content-area h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .content-area h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    align-items: right;
+  }
+  
+  .content-area p {
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
+  
+  .content-area button {
+    background-color: #ff9900;
+    color: rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: button-pulse 1s infinite alternate ease-in-out;
+  }
+  
+  @keyframes button-pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 95px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.content a{
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.content a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+
+  .page1{
+    width:100%;
+    height:100vh;
+  }
+ /* Style the page container */
+/* Style the page container */
+.page1 {
+    display: flex;
+    height: 100vh; /* Set the height to 100% of the viewport */
+  }
+  
+  /* Style the container within the page */
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style the image container */
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* Distributes images evenly */
+    width: 100%; /* Ensures images fill the available width */
+    margin-bottom: 1rem; /* Adds space below the images */
+  }
+  
+  /* Style the image item (container for image & caption) */
+  .image-item {
+    text-align: center; /* Centers text below image */
+    margin: 0.5rem; /* Adds space between image items */
+  }
+  
+  /* Style the image */
+  .image {
+    width: 32%; /* Adjust image width as needed (33% for equal width) */
+    height: auto;
+    object-fit: cover; /* Ensures image fills container proportionally */
+    transition: transform 0.3s ease-in-out; /* Transition for hover effect */
+    border-radius: 2%;
+  }
+  
+  /* Style the image on hover */
+  .image:hover {
+    transform: scale(1.1); /* Slight scale on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow on hover */
+  }
+  
+  /* Style the image caption */
+  .image-item p {
+    margin-top: 0.5rem; /* Adds space between image and caption */
+  }
+  
+  /* Style the text area */
+  .text-area {
+    width: 100%; /* Adjust text area width as needed */
+    text-align: left; /* Centers text horizontally */
+  }
+  
+  /* Style the heading */
+  h1 {
+    margin-bottom: 1rem; /* Adds space below the heading */
+    font-family: Poppins;
+    font-size: 500%;
+    color:#fff
+  }
+  /* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure navbar is above video */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency for hover */
+  border-radius: 5px;
+}
+
+  
+  
+
+  
